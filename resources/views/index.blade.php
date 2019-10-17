@@ -26,7 +26,7 @@
 @media (min-width: 1191px){
     .col-sm-4 {
         flex: 0 0 50%;
-        max-width: 50%!important;
+        max-width: 33%!important;
     }
 }
 </style>
@@ -49,7 +49,7 @@
                                     <div class="row">
                                         <div class="col-sm-4" v-for="item in items">
                                             <div class="card rounded-0 mt-2">
-                                                <div class="card-header">@{{ item.name }}</div>
+                                                <div class="card-header">@{{ item.name }} <span class="float-right">@{{ item.price }}</span></div>
                                                     <div class="card-body text-center">
                                                         <img src="https://dummyimage.com/120x140/5c5c5c/ffffff" alt="" v-on:click="addToBasket(item)">
                                                     </div>
