@@ -40,14 +40,14 @@
                             <div class="card rounded-0 mb-2">
                                 <div class="card-header">
                                     <h5 class="mb-0">
-                                        <span class="btn btn-success rounded-0 btn-block">
+                                        <span class="btn btn-success rounded-0 btn-block" v-cloak>
                                             @{{ items[0].category == null ? 'Others' : items[0].category }}
                                         </span>
                                     </h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-sm-4" v-for="item in items">
+                                        <div class="col-sm-4" v-for="item in items" v-cloak>
                                             <div class="card rounded-0 mt-2">
                                                 <div class="card-header">@{{ item.name }} <span class="float-right">@{{ item.price }}</span></div>
                                                     <div class="card-body text-center">

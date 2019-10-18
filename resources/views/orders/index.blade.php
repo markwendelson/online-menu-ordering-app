@@ -13,7 +13,7 @@
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item list-group-item-info rounded-0">Transaction Code: @{{ items[0].transaction_code }}</li>
                                     </ul>
-                                    <ul class="list-group list-group-flush" v-for="(item, index) in items" :key="index">
+                                    <ul class="list-group list-group-flush" v-for="(item, index) in items" :key="index" v-cloak>
                                         <li class="list-group-item">@{{ item.name }}
                                             <span>@{{ item.quantity }}</span> x <span>@{{ item.quantity }}</span>
                                             <div class="pull-right">
