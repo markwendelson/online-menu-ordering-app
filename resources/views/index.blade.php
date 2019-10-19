@@ -29,6 +29,26 @@
         max-width: 33%!important;
     }
 }
+.product-image {
+    z-index: 1;
+}
+.product-image-hover {
+    position: absolute;
+    top: 50px;
+    height: 78%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #58c172;
+}
+.product:hover .product-image-hover {
+    opacity:1;
+}
+
+.product:active .product-image-hover{
+    background-color: #ffffff;
+    transition: .1s ease;
+}
 </style>
 <div id="order-form" class="container">
     <div class="row justify-content-center">
@@ -48,9 +68,10 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-4" v-for="item in items" v-cloak>
-                                            <div class="card rounded-0 mt-2">
+                                            <div class="card rounded-0 mt-2 product">
                                                 <div class="card-header">@{{ item.name }} <span class="float-right">@{{ item.price }}</span></div>
-                                                    <div class="card-body text-center">
+                                                    <div class="product-image-hover"></div>
+                                                    <div class="card-body text-center product-image">
                                                         <img src="https://dummyimage.com/120x140/5c5c5c/ffffff" alt="" v-on:click="addToBasket(item)">
                                                     </div>
                                             </div>

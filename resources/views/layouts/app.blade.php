@@ -17,8 +17,22 @@
     <link href="{{ url('css/app.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <style>
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .page-loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('images/loading.gif') center no-repeat #fff;
+        }
+    </style>
 </head>
 <body>
+    <div class="page-loader"></div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -87,6 +101,15 @@
 
 
     <script src="{{ url('js/app.js') }}"></script>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".page-loader").fadeOut("slow");;
+        });
+    </script>
     @yield('extra_scripts')
     <script type="text/javascript">
         var order_no = document.getElementById('order_no')
