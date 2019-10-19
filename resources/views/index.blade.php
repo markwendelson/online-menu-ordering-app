@@ -67,12 +67,12 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-sm-4" v-for="item in items" v-cloak>
+                                        <div class="col-sm-4" v-for="item in items"  v-on:click="addToBasket(item)" v-cloak>
                                             <div class="card rounded-0 mt-2 product">
                                                 <div class="card-header">@{{ item.name }} <span class="float-right">@{{ item.price }}</span></div>
                                                     <div class="product-image-hover"></div>
                                                     <div class="card-body text-center product-image">
-                                                        <img src="https://dummyimage.com/120x140/5c5c5c/ffffff" alt="" v-on:click="addToBasket(item)">
+                                                        <img src="https://dummyimage.com/120x140/5c5c5c/ffffff" alt="">
                                                     </div>
                                             </div>
                                         </div>
