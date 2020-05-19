@@ -100,7 +100,7 @@
     </div>
 
 
-    <script src="{{ url('js/app.js') }}"></script>
+    <script src="{{ url('js/app.js/') }}"></script>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
