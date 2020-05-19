@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css/') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css/', env('REDIRECT_HTTPS')) }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <style>
@@ -100,7 +100,7 @@
     </div>
 
 
-    <script src="{{ asset('js/app.js/') }}"></script>
+    <script src="{{ asset('js/app.js/', env('REDIRECT_HTTPS')) }}"></script>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
